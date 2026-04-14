@@ -1,0 +1,129 @@
+/* ============================================
+   @oluizporto — Branding CSS
+   Distressed, analógico, imperfeito.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Outfit:wght@400;500;700&display=swap');
+
+:root {
+  --bg-dark: #0e0e0e;
+  --bg-light: #f2f0ed;
+  --text-title: #e0e0e0;
+  --text-highlight: #ffffff;
+  --text-body: #999999;
+  --text-muted: #888888;
+  --text-handle: rgba(255, 255, 255, 0.5);
+  --text-dark-title: #1a1a1a;
+  --text-dark-body: #555555;
+  --text-dark-label: rgba(26, 26, 26, 0.35);
+  --amber: #f5a623;
+  --amber-highlight: rgba(245, 166, 35, 0.42);
+  --amber-subtle: rgba(245, 166, 35, 0.25);
+  --amber-line: rgba(245, 166, 35, 0.3);
+  --font-headline: 'Averia Serif Libre', Georgia, serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  background: var(--bg-dark);
+  color: var(--text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--text-title);
+  line-height: 1.2;
+  filter: blur(0.3px);
+}
+
+p, span, a, li {
+  filter: blur(0.3px);
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.5rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.accent {
+  color: var(--amber);
+  opacity: 0.85;
+}
+
+.highlight {
+  background: linear-gradient(90deg,
+    rgba(245, 166, 35, 0.42) 0%,
+    rgba(245, 166, 35, 0.40) 60%,
+    rgba(245, 166, 35, 0.12) 75%,
+    rgba(245, 166, 35, 0.38) 85%,
+    rgba(245, 166, 35, 0.40) 100%
+  );
+  border-radius: 4px;
+  padding: 2px 6px;
+  transform: rotate(-0.6deg);
+  display: inline-block;
+}
+
+.section-dark {
+  background: var(--bg-dark);
+  color: var(--text-body);
+}
+
+.section-light {
+  background: var(--bg-light);
+  color: var(--text-dark-body);
+}
+
+.section-light h1,
+.section-light h2,
+.section-light h3 {
+  color: var(--text-dark-title);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid rgba(245, 166, 35, 0.2);
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 3rem 1.25rem;
+  }
+}
