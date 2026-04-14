@@ -35,36 +35,6 @@ export default function About() {
         </div>
 
         <div className={styles.block}>
-          <h2>Stack</h2>
-          <div className={styles.stackGrid}>
-            <div className={styles.stackItem}>
-              <span className={styles.stackLabel}>Frontend</span>
-              <span className={styles.stackValue}>React, Next.js</span>
-            </div>
-            <div className={styles.stackItem}>
-              <span className={styles.stackLabel}>Backend</span>
-              <span className={styles.stackValue}>Node.js, Python</span>
-            </div>
-            <div className={styles.stackItem}>
-              <span className={styles.stackLabel}>Database</span>
-              <span className={styles.stackValue}>PostgreSQL</span>
-            </div>
-            <div className={styles.stackItem}>
-              <span className={styles.stackLabel}>AI</span>
-              <span className={styles.stackValue}>Claude, LangGraph</span>
-            </div>
-            <div className={styles.stackItem}>
-              <span className={styles.stackLabel}>Automação</span>
-              <span className={styles.stackValue}>N8N, workflows</span>
-            </div>
-            <div className={styles.stackItem}>
-              <span className={styles.stackLabel}>Infra</span>
-              <span className={styles.stackValue}>Vercel, GitHub Actions</span>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.block}>
           <h2>Contato</h2>
           <p className={styles.links}>
             <a href="https://instagram.com/oluizporto" target="_blank" rel="noopener noreferrer">Instagram</a>

@@ -47,7 +47,6 @@
   align-items: center;
   gap: 6px;
   transform: rotate(-1deg) skewX(-0.8deg);
-  filter: blur(0.3px);
   letter-spacing: 0.3px;
 }
 
@@ -65,7 +64,6 @@
   font-size: 0.7rem;
   color: var(--text-muted);
   opacity: 0.35;
-  filter: blur(0.3px);
 }
 
 .postTitle {
