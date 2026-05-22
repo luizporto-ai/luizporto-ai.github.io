@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BLOG IA DESCOMPLICADA — variação DARK (fundo preto, brandmark branco) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" width="2000" height="2000">
+  <rect width="2000" height="2000" fill="#0a0a0a"/>
+
+  <!-- BLOG -->
+  <text x="1000" y="690"
+        font-family="'Geist', 'Inter', system-ui, -apple-system, sans-serif"
+        font-weight="600"
+        font-size="540"
+        letter-spacing="-27"
+        fill="#ffffff"
+        text-anchor="middle"
+        dominant-baseline="alphabetic">BLOG</text>
+
+  <!-- box IA / DESCOMPLICADA -->
+  <rect x="250" y="860" width="1500" height="800"
+        fill="none" stroke="#ffffff" stroke-width="8"/>
+
+  <text x="340" y="1170"
+        font-family="'Inter', system-ui, -apple-system, sans-serif"
+        font-weight="600"
+        font-size="180"
+        letter-spacing="32.4"
+        fill="#ffffff"
+        dominant-baseline="alphabetic">IA</text>
+
+  <text x="340" y="1500"
+        font-family="'Inter', system-ui, -apple-system, sans-serif"
+        font-weight="600"
+        font-size="180"
+        letter-spacing="32.4"
+        fill="#ffffff"
+        dominant-baseline="alphabetic">DESCOMPLICADA</text>
+</svg>
