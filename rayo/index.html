@@ -784,6 +784,16 @@
       .step-arrow { display: none; }
       .angles-grid { grid-template-columns: repeat(2, 1fr); }
     }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.86em;
+      color: var(--accent);
+      background: rgba(245,158,11,0.10);
+      border: 1px solid rgba(245,158,11,0.18);
+      padding: 1px 6px;
+      border-radius: 5px;
+    }
+
     /* ─── ANIMAÇÕES ─── */
     /* scroll reveal */
     .reveal {
@@ -839,7 +849,7 @@
       rayo
     </div>
     <a class="nav-link" href="#como-funciona">Como funciona</a>
-    <a class="nav-link" href="#angulos">Ângulos</a>
+    <a class="nav-link" href="#angulos">O que faz</a>
     <a class="nav-cta" href="https://github.com/luizporto-ai/rayo">
       <i class="bi bi-github"></i> GitHub
     </a>
@@ -851,12 +861,12 @@
 
     <div class="hero-inner">
       <h1 class="hero-title">
-        Prompt in.<br>
-        <span class="acc">Vídeo out.</span>
+        Vídeo cru entra.<br>
+        <span class="acc">Corte afiado sai.</span>
       </h1>
 
       <p class="hero-sub">
-        Editor de conteúdo open source. Sete ângulos virais do Instagram, cada um com a skill própria — do prompt ao MP4 sem tocar numa timeline.
+        Editor de vídeo open source que você dirige pelo seu Claude. Corta os silêncios, legenda no ritmo da fala, insere b-roll na hora certa e reenquadra pra 9:16 — tudo não-destrutivo, sobre o mesmo arquivo.
       </p>
 
       <div class="hero-actions">
@@ -882,31 +892,31 @@
     <div class="app-window">
       <div class="app-bar">
         <div class="app-dots"><span></span><span></span><span></span></div>
-        <div class="app-title"><i class="bi bi-lightning-charge-fill"></i> rayo — narrativa-pessoal.tsx</div>
+        <div class="app-title"><i class="bi bi-lightning-charge-fill"></i> rayo — src/edit/edit.ts</div>
       </div>
       <div class="app-body">
         <div class="chat">
           <div class="msg user">
             <div class="msg-avatar"><i class="bi bi-person-fill"></i></div>
-            <div class="bubble">Faz um reel: "testei acordar às 5h por 30 dias". Usa o ângulo de narrativa pessoal.</div>
+            <div class="bubble">Corta os silêncios, legenda tudo e põe b-roll da cidade quando eu falar "São Paulo".</div>
           </div>
           <div class="msg ai">
             <div class="msg-avatar"><i class="bi bi-lightning-charge-fill"></i></div>
             <div class="bubble">
-              Montei um reel de 32s no ângulo <b>Narrativa pessoal</b>. Abre no dia 1 e corta pro resultado aos 15s, com o hook nos primeiros 0.8s.
-              <span class="tag"><i class="bi bi-check-circle-fill"></i> 3 cenas · 32s · 9:16</span>
+              Transcrevi local, cortei <b>6 silêncios</b> e sincronizei as legendas. O b-roll entra em 0:23, no frame exato do "São Paulo". Studio aberto.
+              <span class="tag"><i class="bi bi-check-circle-fill"></i> clean · captions · b-roll</span>
             </div>
           </div>
           <div class="chat-input">
-            <span>Deixa a transição da cena 2 mais rápida<span class="caret"></span></span>
+            <span>Agora faz uma versão vertical 9:16<span class="caret"></span></span>
             <i class="bi bi-arrow-up-circle-fill"></i>
           </div>
         </div>
         <div class="preview">
           <div class="phone">
-            <div class="phone-scene">Cena 01 · Dia 1</div>
-            <div class="phone-headline">Acordei <span class="hl">5h</span> por 30 dias</div>
-            <div class="phone-sub">O dia 4 quase me fez desistir.</div>
+            <div class="phone-scene">Reframe · 9:16</div>
+            <div class="phone-headline">e foi aí que eu <span class="hl">travei</span></div>
+            <div class="phone-sub">Legenda no frame exato da fala, quebrada na pontuação.</div>
             <div class="phone-bar"><span></span></div>
           </div>
         </div>
@@ -924,19 +934,19 @@
       <div class="step">
         <i class="bi bi-arrow-right step-arrow"></i>
         <div class="step-num">01</div>
-        <div class="step-title">Descreve</div>
-        <div class="step-desc">Fala o tema e o ângulo em linguagem natural. Sem timeline, sem keyframe, sem arrastar clipe.</div>
+        <div class="step-title">Clona e solta o clipe</div>
+        <div class="step-desc"><code>git clone</code>, <code>npm install</code> e joga seu vídeo cru em <code>public/input.mp4</code>. Precisa só de ffmpeg.</div>
       </div>
       <div class="step">
         <i class="bi bi-arrow-right step-arrow"></i>
         <div class="step-num">02</div>
-        <div class="step-title">Claude monta</div>
-        <div class="step-desc">O modelo escreve o roteiro e gera os componentes Remotion — cena, texto, ritmo — com a skill do ângulo escolhido.</div>
+        <div class="step-title">Fala pro seu Claude</div>
+        <div class="step-desc">"Corta os silêncios e põe b-roll quando eu falar São Paulo." Ele transcreve local, edita a EDL e abre o Studio.</div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <div class="step-title">Exporta</div>
-        <div class="step-desc">Preview em tempo real, ajuste por conversa e render em MP4 pronto pro feed. Tudo local.</div>
+        <div class="step-title">Preview e render</div>
+        <div class="step-desc">Vê no Remotion Studio, ajusta por conversa e renderiza em MP4 — horizontal ou 9:16, sem refazer.</div>
       </div>
     </div>
   </section>
@@ -972,59 +982,59 @@
     </div>
   </section>
 
-  <!-- 7 ANGLES -->
+  <!-- O QUE FAZ -->
   <section class="section" id="angulos" style="padding-top:0">
     <div class="section-header">
-      <span class="section-label">7 ângulos virais</span>
+      <span class="section-label">O que ele faz</span>
       <div class="section-rule"></div>
     </div>
     <div class="angles-grid">
       <div class="angle">
         <div class="angle-num">01</div>
-        <div class="angle-icon"><i class="bi bi-exclamation-diamond"></i></div>
-        <div class="angle-name">Choque & surpresa</div>
-        <div class="angle-desc">Abre com o dado que ninguém espera.</div>
+        <div class="angle-icon"><i class="bi bi-scissors"></i></div>
+        <div class="angle-name">Clean</div>
+        <div class="angle-desc">Corta todo silêncio acima de N segundos — o pacing que segura a atenção.</div>
       </div>
       <div class="angle">
         <div class="angle-num">02</div>
-        <div class="angle-icon"><i class="bi bi-person-lines-fill"></i></div>
-        <div class="angle-name">Narrativa pessoal</div>
-        <div class="angle-desc">A história em primeira pessoa que prende.</div>
+        <div class="angle-icon"><i class="bi bi-badge-cc"></i></div>
+        <div class="angle-name">Legendas</div>
+        <div class="angle-desc">Transcrição local, palavra a palavra, quebrada na pontuação — não num timer fixo.</div>
       </div>
       <div class="angle">
         <div class="angle-num">03</div>
-        <div class="angle-icon"><i class="bi bi-chat-square-quote"></i></div>
-        <div class="angle-name">Opinião polêmica</div>
-        <div class="angle-desc">Toma um lado e divide a audiência.</div>
+        <div class="angle-icon"><i class="bi bi-film"></i></div>
+        <div class="angle-name">B-roll</div>
+        <div class="angle-desc">Cobre a fala com um clipe mudo na linha exata. Seu áudio continua.</div>
       </div>
       <div class="angle">
         <div class="angle-num">04</div>
-        <div class="angle-icon"><i class="bi bi-graph-up-arrow"></i></div>
-        <div class="angle-name">Dado & prova</div>
-        <div class="angle-desc">Número na tela vale mais que promessa.</div>
+        <div class="angle-icon"><i class="bi bi-layout-split"></i></div>
+        <div class="angle-name">Side-by-side</div>
+        <div class="angle-desc">Divide a tela: fala + b-roll. Lado a lado, ou topo/base no vertical.</div>
       </div>
       <div class="angle">
         <div class="angle-num">05</div>
-        <div class="angle-icon"><i class="bi bi-list-check"></i></div>
-        <div class="angle-name">Tutorial direto</div>
-        <div class="angle-desc">Passo a passo sem enrolação no meio.</div>
+        <div class="angle-icon"><i class="bi bi-zoom-in"></i></div>
+        <div class="angle-name">Zoom</div>
+        <div class="angle-desc">Punch-in na ênfase — o pattern-interrupt que corta a monotonia.</div>
       </div>
       <div class="angle">
         <div class="angle-num">06</div>
-        <div class="angle-icon"><i class="bi bi-x-octagon"></i></div>
-        <div class="angle-name">Erro comum</div>
-        <div class="angle-desc">O deslize que o público comete e não vê.</div>
+        <div class="angle-icon"><i class="bi bi-phone"></i></div>
+        <div class="angle-name">Reframe 9:16</div>
+        <div class="angle-desc">O mesmo corte recomposto pra Reels, TikTok e Shorts. Sem refazer.</div>
       </div>
       <div class="angle">
         <div class="angle-num">07</div>
-        <div class="angle-icon"><i class="bi bi-arrow-left-right"></i></div>
-        <div class="angle-name">Antes vs depois</div>
-        <div class="angle-desc">O contraste que mostra a transformação.</div>
+        <div class="angle-icon"><i class="bi bi-layers-half"></i></div>
+        <div class="angle-name">Não-destrutivo</div>
+        <div class="angle-desc">Tudo é uma camada num EDL. O vídeo original nunca é tocado.</div>
       </div>
       <div class="angle more">
-        <div class="angle-icon"><i class="bi bi-sliders"></i></div>
-        <div class="angle-name">Crie o seu</div>
-        <div class="angle-desc">Cada ângulo é uma skill. Escreva a sua.</div>
+        <div class="angle-icon"><i class="bi bi-code-slash"></i></div>
+        <div class="angle-name">Estenda</div>
+        <div class="angle-desc">Cada função é uma operação em <code>edit.ts</code>. Escreva a sua.</div>
       </div>
     </div>
   </section>
@@ -1034,8 +1044,8 @@
     <div class="cta-inner">
       <div class="cta-mesh"><span></span><span></span><span></span></div>
       <div class="cta-content">
-        <h2 class="cta-title">Seu próximo vídeo<br>começa numa frase.</h2>
-        <p class="cta-sub">Clona o repo, roda um comando e descreve o que quer. O resto é conversa.</p>
+        <h2 class="cta-title">Do clipe cru<br>ao corte afiado.</h2>
+        <p class="cta-sub">Clona o repo, solta seu vídeo e fala com o seu Claude. Local, não-destrutivo, MIT.</p>
         <div class="hero-actions" style="margin-bottom:0">
           <a class="btn-primary" href="https://github.com/luizporto-ai/rayo">
             <i class="bi bi-github"></i> Ver no GitHub
